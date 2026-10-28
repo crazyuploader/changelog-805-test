@@ -1,0 +1,4 @@
+change_type: bug_fix
+component: traces
+note: Fix the trace waterfall scroll.
+issues: [2]
