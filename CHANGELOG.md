@@ -3,3 +3,13 @@
 # Changelog
 
 <!-- next version -->
+
+## v0.1.0
+
+### Added
+
+- `alerts`: Send alert notifications to Telegram. ([#3](https://github.com/crazyuploader/changelog-805-test/pull/3))
+  Add a Telegram channel under Settings > Notification channels with a bot token and chat ID.
+  
+
+<!-- previous-version -->
