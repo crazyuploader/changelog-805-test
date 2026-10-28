@@ -1,7 +1,7 @@
 CHLOGGEN_CONFIG := .chloggen/config.yaml
 FILENAME ?= $(shell git branch --show-current)
 # Repos without a go.mod: CHLOGGEN := go run go.opentelemetry.io/build-tools/chloggen@v0.30.0
-CHLOGGEN ?= go tool chloggen
+CHLOGGEN := go run go.opentelemetry.io/build-tools/chloggen@v0.30.0
 
 .PHONY: chlog-new chlog-validate chlog-preview chlog-update
 chlog-new:

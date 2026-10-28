@@ -1,0 +1,4 @@
+change_type: bug_fix
+component: traces
+note: Keep the span filter when you switch traces.
+issues: [36]
