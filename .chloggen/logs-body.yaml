@@ -1,0 +1,4 @@
+change_type: bug_fix
+component: logs
+note: Show the full log body in the log details view.
+issues: [11]
