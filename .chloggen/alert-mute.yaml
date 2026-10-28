@@ -1,4 +1,4 @@
 change_type: enhancement
 component: alerts
-note: Mute an alert rule for a time window from the alert list.
+note: Mute an alert rule for a set time window, from the alert list.
 issues: [1]
