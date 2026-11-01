@@ -1,0 +1,24 @@
+name: token-read-test
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  read-other-repo-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read a PR in another public repo with GITHUB_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "fork PR: ${{ github.event.pull_request.head.repo.fork }}"
+          gh api repos/SigNoz/signoz/pulls/13074 --jq '"signoz#13074 state=\(.state) merged=\(.merged)"'
+          gh api repos/SigNoz/signoz-otel-collector/pulls/962 --jq '"collector#962 state=\(.state)"'
+          code=$(gh api repos/SigNoz/signoz/pulls/99999999 --silent 2>&1 >/dev/null; echo $?) || true
+          echo "missing PR exit=$code"
+          gh api rate_limit --jq '.resources.core | "rate limit=\(.limit) remaining=\(.remaining)"'
