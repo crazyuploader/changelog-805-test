@@ -1,0 +1,4 @@
+change_type: bug_fix
+component: logs
+note: Test entry for the GITHUB_TOKEN cross-repo read test.
+issues: [1]
